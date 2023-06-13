@@ -1,0 +1,10 @@
+.homepage-container button{
+    border: none;
+    font-size: 22px;
+    margin: 40px 20px;
+    cursor: pointer;
+}
+
+.homepage-container{
+    text-align: center;
+}
