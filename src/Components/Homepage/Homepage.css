@@ -1,10 +1,22 @@
-.homepage-container button{
+.buttons-container button{
     border: none;
     font-size: 22px;
     margin: 40px 20px;
     cursor: pointer;
 }
 
-.homepage-container{
+.buttons-container{
     text-align: center;
+}
+
+#filter-btns, #show-all-items{
+    background-color: #385170;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.elements-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }

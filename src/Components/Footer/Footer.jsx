@@ -4,8 +4,9 @@ import './Footer.css'
 function Footer() {
   return (
     <div className='footer-container'>
-      Footer
-      </div>
+      <h4>Made by Cristian Serban</h4>
+      <h3>Contact Us</h3>
+    </div>
   )
 }
 

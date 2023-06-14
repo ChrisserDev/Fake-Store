@@ -1,5 +1,9 @@
 .footer-container{
-    background-color: #778899;
-    padding: 10px;
-    color:var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 26px;
+    background-color: #385170;
+    color: white;
   }
