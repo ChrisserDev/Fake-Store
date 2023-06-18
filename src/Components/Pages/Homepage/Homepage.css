@@ -1,3 +1,7 @@
+.homepage-container{
+    height: 60%;
+}
+
 .buttons-container button{
     border: none;
     font-size: 22px;
@@ -9,14 +13,14 @@
     text-align: center;
 }
 
-#filter-btns, #show-all-items{
+#filter-btns, #show-all-btn{
     background-color: #385170;
     color: white;
     padding: 10px;
     border-radius: 12px;
 }
 
-.elements-container{
+.products-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }

@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className='footer-container'>
       <h4>Made by Cristian Serban</h4>
-      <h3>Contact Us</h3>
+      <a href='#' id='contact-us-btn'>Contact Us</a>
     </div>
   )
 }

@@ -1,50 +1,64 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './Homepage.css'
-import ElementCard from '../ElementCard/ElementCard'
+import ProductCard from '../../ElementCard/ProductCard'
 
 function Homepage() {
-  const [elements, setElements] = useState([]);
+  const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState ([]);
 
   //Show all the items when the page loads
 
-  // const categories = ["Electronics", "jewelery", "men's clothing", "women's clothing"];
-
   useEffect (() => {
     //Call Api to get the items data
-    axios.get(`https://fakestoreapi.com/products`)
+   axios.get(`https://fakestoreapi.com/products`)
     .then(res => {
       console.log(res.data)
       //Store the data from the API in state
-      setElements(res.data)
+      setProducts(res.data)
     })
     .catch(err => console.log(err))
 
     //Get the categories from the API
     axios.get(`https://fakestoreapi.com/products/categories`)
     .then(res => {
-      console.log(res.data)
       setCategories(res.data)
     })
     .catch(err => console.log(err))
   }, []);
 
+
+  const handleCategory = (category) =>{
+    // console.log(category);
+    axios.get(`https://fakestoreapi.com/products/category/${category}`)
+      .then(res => {
+        setProducts(res.data);
+      })
+      .catch(err => console.log(err));
+  }
+
+  const showAllItems = () =>{
+      axios.get(`https://fakestoreapi.com/products`)
+      .then(res => {
+        setProducts(res.data)
+      })
+      .catch(err => console.log(err));
+  };
+
   return (
     <div className='homepage-container'>
       <div className='buttons-container'>
-      <button id='show-all-items'>Show All</button>
+      <button id='show-all-btn' onClick={showAllItems}>Show All</button>
           {
               categories.map(category=> (
-                <button id="filter-btns" key={category} onClick={() => handleCategoryClick(category)}>
+                <button id="filter-btns" key={category} onClick={() => handleCategory(category)}>
                 {category.charAt(0).toUpperCase() + category.slice(1)}
               </button>
-              
           ))}
       </div>
-        <div className='elements-container'>
+        <div className='products-container'>
             {
-              elements.map(item => <ElementCard key={item.id} element={item}/>)
+              products.map(item => <ProductCard key={item.id} product={item}/>)
             }
         </div>
     </div>
