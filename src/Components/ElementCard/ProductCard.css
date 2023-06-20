@@ -20,6 +20,22 @@
     position: relative;
 }
 
+#more-details-btn{
+    background-color: transparent;
+    border: 2px solid #385170;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#more-details-btn:hover{
+    background-color: #385170;
+    color: white;
+}
+
+
 #heart-btn{
     /* color: #385170; */
     font-size: 24px;
