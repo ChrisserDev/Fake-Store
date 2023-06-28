@@ -6,6 +6,7 @@ import ProductCard from '../../ElementCard/ProductCard'
 function Homepage() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState ([]);
+  const [loading, setLoading] = useState(true);
 
   //Show all the items when the page loads
 
@@ -44,6 +45,20 @@ function Homepage() {
       })
       .catch(err => console.log(err));
   };
+
+  //Loading effect
+
+  useEffect(() => {
+    setTimeout(() => {
+     setLoading(false);
+    }, 2000);
+
+   }, []);
+  
+   
+  if (loading) {
+    return <div className="ring">Loading...</div>
+   }
 
   return (
     <div className='homepage-container'>

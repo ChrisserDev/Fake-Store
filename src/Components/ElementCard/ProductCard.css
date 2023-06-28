@@ -23,11 +23,18 @@
 #more-details-btn{
     background-color: transparent;
     border: 2px solid #385170;
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
     border-radius: 16px;
     cursor: pointer;
     text-decoration: none;
+    color: #385170;
+    font-weight: bold;
+}
+
+.dark #more-details-btn{
+    color: white;
+    border: 2px solid #385170;
 }
 
 #more-details-btn:hover{
