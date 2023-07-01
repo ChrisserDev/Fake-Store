@@ -1,31 +1,38 @@
 .homepage-container{
-    height: 60%;
-}
-
-.buttons-container button{
-    border: none;
-    font-size: 22px;
-    margin: 40px 20px;
-    cursor: pointer;
-}
-
-.buttons-container{
-    text-align: center;
-}
-
-#filter-btns, #show-all-btn{
-    padding: 10px;
-    border-radius: 12px;
-    border: 1px solid #385170;
+  height: 60%;
 }
 
 .products-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.ring{
+.buttons-container button{
+  border: none;
+  font-size: 22px;
+  margin: 40px 20px;
+  cursor: pointer;
+}
 
+.buttons-container button:hover{
+  background-color: #385170;
+  color: white;
+}
+
+.buttons-container{
+  text-align: center;
+}
+
+#filter-btns, #show-all-btn{
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #385170;
+}
+
+
+/* STYLING FOR THE LOADING MESSAGE THAT IS BEING DISPLAYED WHILE THE DATA IS BEING FETCHED FROM THE API */
+
+.ring{
   position:absolute;
   top:55%;
   left:50%;

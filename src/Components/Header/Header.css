@@ -8,11 +8,9 @@
   color: white;
 }
 
-.right-side-header-links {
-  display: flex;
-  justify-content: space-evenly;
-  width: 150px;
-  align-items: center;
+.header-container i {
+  font-size: 40px;
+  position: relative;
 }
 
 #title {
@@ -22,10 +20,13 @@
   font-weight: bold;
 }
 
-.header-container i {
-  font-size: 40px;
-  position: relative;
+.right-side-header-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 150px;
+  align-items: center;
 }
+
 
 #basket-items {
   position: absolute;
@@ -37,6 +38,8 @@
   border-radius: 12px;
   color: white;
 }
+
+/* DARK MODE CONTAINER */
 
 .switch {
   font-size: 17px;
@@ -151,6 +154,7 @@ input:checked + .slider:before {
 
 #basket-icon{
   color: #183153;
+  font-size: 40px;
 }
 
 .dark #basket-icon {

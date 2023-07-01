@@ -8,21 +8,21 @@
     color: white;
   }
 
-  #contact-us-btn{
-    color: #385170;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: bold;
-  }
-
-  .dark #contact-us-btn{
-    color: white;
-  }
-
 .footer-container h2{
     color: #385170;
   }
 
-  .dark .footer-container h2{
-    color: white;
-  }
+#contact-us-btn{
+  color: #385170;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.dark #contact-us-btn{
+  color: white;
+}
+
+.dark .footer-container h2{
+  color: white;
+}
