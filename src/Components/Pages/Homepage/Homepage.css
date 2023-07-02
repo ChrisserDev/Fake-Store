@@ -1,5 +1,5 @@
 .homepage-container{
-  height: 60%;
+  min-height: 100vh;
 }
 
 .products-container{
@@ -9,13 +9,14 @@
 
 .buttons-container button{
   border: none;
-  font-size: 22px;
-  margin: 40px 20px;
+  font-size: 18px;
+  margin: 20px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .buttons-container button:hover{
-  background-color: #385170;
+  background-color: #3A4895;
   color: white;
 }
 
@@ -26,9 +27,8 @@
 #filter-btns, #show-all-btn{
   padding: 10px;
   border-radius: 12px;
-  border: 1px solid #385170;
+  border: 1px solid lightgrey;
 }
-
 
 /* STYLING FOR THE LOADING MESSAGE THAT IS BEING DISPLAYED WHILE THE DATA IS BEING FETCHED FROM THE API */
 
@@ -43,13 +43,12 @@
   border:3px solid #3c3c3c;
   border-radius:50%;
   text-align: center;
-  line-height: 180px;
+  line-height: 190px;
   font-family:sans-serif;
   font-size: 22px;
-  color: #385170;
+  color: #3A4895;
   letter-spacing: 4px;
   text-transform:uppercase;
-  text-shadow:0 0 10px #385170;
   box-shadow:0 0 22px rgba(0,0,0,.5);
 }
 

@@ -50,8 +50,12 @@ export default function CartContextProvider(props){
         setCart(newCart)
     }
 
+    const clearCart = () => {
+        setCart([]);
+    }
+
     return(
-        <CartContext.Provider value={{cart, addProduct, removeProduct}}>
+        <CartContext.Provider value={{cart, addProduct, removeProduct, clearCart}}>
             {props.children}
         </CartContext.Provider>
     )

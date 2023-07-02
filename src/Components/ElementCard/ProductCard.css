@@ -1,59 +1,80 @@
 /* Product Container */
-
 .product-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    border: 2px solid #385170;
-    padding: 20px;
-    border-radius: 12px;
-    object-fit: contain;
-    height: 95%;
-    margin: 0 20px;
-    gap: 10px;
+    justify-content: space-between;
+    margin: 10px 25px 20px 25px;
+    padding: 20px 40px;
     position: relative;
+    box-shadow: 0px 0px 5px -1px rgba(190, 189, 189, 0.75);
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(190, 189, 189, 0.75);
+    -moz-box-shadow: 0px 0px 5px -1px rgba(190, 189, 189, 0.75);
 }
 
 .product-card img{
-    width: 120px;
-    height: 140px;
-    background-color: transparent;
+    width: 250px;
+    height: 260px;
+    border: 1px solid lightgrey;
+    padding: 50px;
+    border-radius: 8px;
+    align-self: center;
 }
 
-#more-details-btn{
-    background-color: transparent;
-    border: 2px solid #385170;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 16px;
+.bottom-card-section{
+    display: flex;
+    gap: 75px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.product-card h4{
+    font-size: 16px;
+    padding: 10px 0 5px 0;
+}
+
+#discover-more-btn{
+    background: #FFD814;
+    font-size: 16px;
+    padding: 10px 5px; 
     cursor: pointer;
     text-decoration: none;
-    color: #385170;
-    font-weight: bold;
+    color: black;
+    height: fit-content;
 }
 
-#more-details-btn:hover{
+#discover-more-btn:hover{
     background-color: #385170;
     color: white;
 }
 
-.dark #more-details-btn{
+.bottom-card-section h4{
+    font-size: 20px;
+}
+
+.dark #discover-more-btn{
     color: white;
     border: 2px solid #385170;
 }
 
 #heart-btn {
-    font-size: 24px;
+    font-size: 18px;
     position: absolute;
-    left: 84%;
-    top: 4%;
+    left: 70%;
+    top: 7%;
     text-align: center;
     padding: 10px 0;
-    /* border-radius: 50px;
-    background-color: #385170;
-    color: aliceblue; */
+    background-color: lightgrey;
+    border-radius: 50%;
     width: 45px;
     height: 45px;
     cursor: pointer;
+    color: #3A4895;
+}
+
+.product-card p{
+    font-size: 16px;
+    /* position: absolute;
+    top: 68%;
+    left: 10%; */
+    color: gray;
 }

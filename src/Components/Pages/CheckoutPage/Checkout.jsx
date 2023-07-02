@@ -1,11 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react'
 import './Checkout.css'
 import { CartContext } from '../../Contexts/CartContext'
-import {BsTrash3} from 'react-icons/bs'
+import {BsTrash3, BsCheck2Circle} from 'react-icons/bs'
 import Modal from 'react-modal';
 import { useNavigate } from 'react-router-dom';
 
 function Checkout() {
+
+  const {cart, removeProduct, clearCart} = useContext(CartContext)
 
   //activate useNavigate
 
@@ -13,11 +15,10 @@ function Checkout() {
 
   const showHomePage = () => {
     //could do other things here (such as we need to clear the cart before moving to the homepage)
-    
+    clearCart();
     navigate('/')
   }
 
-  const {cart, removeProduct} = useContext(CartContext)
 
   //Function to calculate the total price.
   const getTotal = () => {
@@ -26,7 +27,7 @@ function Checkout() {
 
   const customStyles = {
     content: {
-      top: '65%',
+      top: '55%',
       left: '50%',
       right: 'auto',
       bottom: 'auto',
@@ -38,7 +39,7 @@ function Checkout() {
     }
   }
   
-    Modal.setAppElement(document.getElementById('root'));
+   Modal.setAppElement(document.getElementById('root'));
   
    const [isOpen, setIsOpen] = React.useState(false);
 
@@ -47,9 +48,7 @@ function Checkout() {
         { cart.length > 0?
         <div className='checkout-box'>
         <div className='checkout-container-header'>
-          <section className='left-side-checkout-container'>
             <p>Item</p>
-          </section>
           <section className='right-side-checkout-container'>
             <p>Price</p>
             <p>Quantity</p>
@@ -60,11 +59,15 @@ function Checkout() {
               {
                 cart.map(item => (
                   <div className='checkout-product-item' key={item?.id}>
-                  <img src={item?.image}></img>
-                  <h3>{item.title}</h3>
-                  <h2>{"£" + item.price}</h2>
-                  <strong id='quantity'>1</strong>
-                  <i id='remove-icon' onClick={() => removeProduct(item?.id)}> <BsTrash3 /></i>
+                    <section className='checkout-left-side'>
+                    <img src={item?.image}></img>
+                    <h3>{item.title}</h3>
+                    </section>
+                  <section className='checkout-right-side'>
+                    <h2>{"£" + item.price}</h2>
+                    <strong id='quantity'>1</strong>
+                    <i id='remove-icon' onClick={() => removeProduct(item?.id)}> <BsTrash3 /></i>
+                  </section>
                 </div>
                 ))
               }
@@ -79,12 +82,11 @@ function Checkout() {
                 onRequestClose={() => setIsOpen(false)}
                 style={customStyles}
                 contentLabel='Checkout Confirmation'>
-              
                 <div className='modal-container'>
+                  <i id='modal-check-icon'>< BsCheck2Circle /></i>
                   <h1>Your order was successful!</h1>
-                  <h2>Check your email for the order confirmation. Thank you for shopping with Fake Store!</h2>
+                  <p>Check your email for the order confirmation. Thank you for shopping with Fake Store!</p>
                   <button id='return-btn' onClick={showHomePage}>Return to Main Page</button>
-                  {/* <button className='modal-close-btn' onClick={() => setIsOpen(false)}>X</button> */}
                 </div>
               </Modal>
             </div>

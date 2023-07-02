@@ -55,28 +55,39 @@ function Homepage() {
 
    }, []);
    
-  if (loading) {
-    return <div className="ring">Loading...</div>
-   }
+  // if (loading) {
+  //   return <div className="ring">Loading...</div>
+  //  }
 
-return (
-    <div className='homepage-container'>
-      <div className='buttons-container'>
-      <button id='show-all-btn' onClick={showAllItems}>Show All</button>
-          {
-              categories.map(category=> (
-                <button id="filter-btns" key={category} onClick={() => handleCategory(category)}>
+  return (
+    <div className="homepage-container">
+      {loading ? (
+        <div className="ring">Loading...</div>
+      ) : (
+        <>
+          <div className="buttons-container">
+            <button id="show-all-btn" onClick={showAllItems}>
+              Show All
+            </button>
+            {categories.map((category) => (
+              <button
+                id="filter-btns"
+                key={category}
+                onClick={() => handleCategory(category)}
+              >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
               </button>
-          ))}
-      </div>
-      <div className='products-container'>
-            {
-              products.map(item => <ProductCard key={item.id} product={item}/>)
-            }
-      </div>
+            ))}
+          </div>
+          <div className="products-container">
+            {products.map((item) => (
+              <ProductCard key={item.id} product={item} />
+            ))}
+          </div>
+        </>
+      )}
     </div>
-  )
+  );
 }
 
 export default Homepage

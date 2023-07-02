@@ -22,10 +22,12 @@ function ProductCard({product}) {
   return (
     <div className='product-card'>
         <img src={product?.image} alt={product?.title}/>
-        <h4>{product?.title}</h4>
-        <p className='item-category'>{product?.category.charAt(0).toUpperCase() + product?.category.slice(1)}</p>
-        <h4>{"£" + product?.price}</h4>
-        <Link to={`/Product/${product?.id}`} id='more-details-btn' type='button'>More Details</Link>
+          <h4>{product?.title}</h4>
+          <p className='item-category'>{product?.category.charAt(0).toUpperCase() + product?.category.slice(1)}</p>
+        <section className='bottom-card-section'>
+          <h4>{"£" + product?.price}</h4>
+          <Link to={`/Product/${product?.id}`} id='discover-more-btn' type='button'>Discover more</Link>
+        </section>
         {
             shoppingCartItem?
             <FaHeart id='heart-btn' onClick={() => removeProduct(product?.id)}/>
