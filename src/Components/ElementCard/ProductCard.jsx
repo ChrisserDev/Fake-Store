@@ -15,11 +15,11 @@ function ProductCard({product}) {
       //Is this item in shopping cart?
       setShoppingCartItem(cart.find(item => item.id == product.id))
 
-  }, [cart])
+  }, [cart]);
 
   //Rendering the products from the API on the page
 
-  return (
+return (
     <div className='product-card'>
         <img src={product?.image} alt={product?.title}/>
           <h4>{product?.title}</h4>

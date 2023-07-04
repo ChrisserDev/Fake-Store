@@ -31,7 +31,7 @@ body{
 
 @media (max-width: 1024px){
 
-  .products-container {
+.products-container {
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -82,6 +82,7 @@ body{
 }
 }
 
+
 @media (max-width: 920px){
   .header-container, .footer-container{
     width: auto;
@@ -89,7 +90,8 @@ body{
 }
 
 @media (max-width: 769px){
-  .products-container {
+
+.products-container {
     grid-template-columns: repeat(2, 1fr);
     width: auto;
 }
@@ -128,7 +130,7 @@ body{
 }
 
 .checkout-box{
-  margin-left: 0;
+  margin-left: 70px;
 }
 
 .buttons-container {
@@ -177,6 +179,10 @@ body{
 @media(max-width: 620px){
   .products-container {
     grid-template-columns: repeat(2, 1fr);
+}
+
+.checkout-container{
+  margin-right: 0;
 }
 
 .product-card{

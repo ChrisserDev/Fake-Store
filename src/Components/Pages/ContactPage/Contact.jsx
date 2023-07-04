@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
-
 import './Contact.css';
 
 function Contact() {
+  
+  //Setting state for the form 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [message, setMessage] = useState('');
@@ -36,6 +37,7 @@ function Contact() {
     setIsOpen(true);
   };
 
+  //Custom styling for the modal
   const customStyles = {
     content: {
       top: '60%',
@@ -54,7 +56,7 @@ function Contact() {
     Modal.setAppElement('#root');
   }, []);
 
-  return (
+return (
     <div className="contact-container">
       <h1>Contact Us</h1>
       <form className="form-container" onSubmit={handleSubmit}>

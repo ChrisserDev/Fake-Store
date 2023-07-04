@@ -6,11 +6,9 @@ import { CartContext } from '../Contexts/CartContext'
 
 function Header() {
 
-  // const [cart, setCart] = React.useState([])
-
   const {cart} = useContext(CartContext)
 
-  return (
+return (
     <div className='header-container'>
         <Link to='/' id='title'>Fake Store</Link>
             <Link to={'/Checkout'} id='basket-icon'><BsFillBasket2Fill /></Link>

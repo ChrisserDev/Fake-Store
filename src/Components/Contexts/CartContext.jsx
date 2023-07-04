@@ -7,7 +7,7 @@ export default function CartContextProvider(props){
     //create global state here
     const [cart, setCart] = useState([])
 
-// The useEffect below is used for the local storage
+    //The useEffect below is used for the local storage
 
     useEffect(
         ()=>{

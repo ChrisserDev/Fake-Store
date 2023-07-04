@@ -54,10 +54,6 @@ function Homepage() {
     }, 2000); //Adding 2 seconds delay to the loading message for a better user experience.
 
    }, []);
-   
-  // if (loading) {
-  //   return <div className="ring">Loading...</div>
-  //  }
 
   return (
     <div className="homepage-container">

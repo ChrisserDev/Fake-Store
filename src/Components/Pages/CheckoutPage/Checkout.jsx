@@ -6,25 +6,28 @@ import Modal from 'react-modal';
 import { useNavigate } from 'react-router-dom';
 
 function Checkout() {
-
+  
   const {cart, removeProduct, clearCart} = useContext(CartContext)
-
+  
   //activate useNavigate
-
   const navigate = useNavigate();
 
   const showHomePage = () => {
-    //could do other things here (such as we need to clear the cart before moving to the homepage)
+    //Clearing the cart before moving to the homepage.
     clearCart();
     navigate('/')
   }
-
 
   //Function to calculate the total price.
   const getTotal = () => {
     return cart.reduce((total, item) => total + item.price, 0);
   }
 
+  Modal.setAppElement(document.getElementById('root'));
+  
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  //Styling for modal
   const customStyles = {
     content: {
       top: '55%',
@@ -39,9 +42,6 @@ function Checkout() {
     }
   }
   
-   Modal.setAppElement(document.getElementById('root'));
-  
-   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <div className='checkout-container'>

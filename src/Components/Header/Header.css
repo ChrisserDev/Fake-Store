@@ -18,8 +18,8 @@
 .right-side-header-links {
   display: flex;
   justify-content: space-evenly;
-  width: 150px;
   align-items: center;
+  width: 150px;
 }
 
 #basket-icon{
