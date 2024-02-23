@@ -15,19 +15,22 @@
   background-color: transparent;
 }
 
-.buttons-container button:hover{
-  background-color: #3A4895;
+#filter-btns:hover, #show-all-btn:hover{
   color: white;
+  background-color: #272f61;
 }
 
 .buttons-container{
   text-align: center;
+  margin: 1em 0;
 }
 
 #filter-btns, #show-all-btn{
   padding: 10px;
   border-radius: 12px;
-  border: 1px solid lightgrey;
+  border: none;
+  background-color: #3A4895;
+  color: white;
 }
 
 /* STYLING FOR THE LOADING MESSAGE THAT IS BEING DISPLAYED WHILE THE DATA IS BEING FETCHED FROM THE API */

@@ -66,13 +66,15 @@ function Homepage() {
               Show All
             </button>
             {categories.map((category) => (
-              <button
-                id="filter-btns"
-                key={category}
-                onClick={() => handleCategory(category)}
-              >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </button>
+            <button
+              to="/"
+              id="filter-btns"
+              key={category}
+              onClick={() => handleCategory(category)}
+              
+            >
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>
             ))}
           </div>
           <div className="products-container">
