@@ -1,3 +1,6 @@
+# Fake-Store 
+https://fakeowebstore.netlify.app/
+
 ## Overview
 This project is a React-based e-commerce website called "Fake Store." It includes various components such as a homepage displaying products, a product details page, a shopping cart, a checkout page, and a contact form. 
 
