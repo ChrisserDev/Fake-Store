@@ -8,7 +8,6 @@ export default function CartContextProvider(props){
     const [cart, setCart] = useState([])
 
     //The useEffect below is used for the local storage
-
     useEffect(
         ()=>{
             //is there a value in localStorage
@@ -20,7 +19,7 @@ export default function CartContextProvider(props){
                 setCart(JSON.parse(storedCartProducts))
             }
 
-        }, [] //runs once when component loads
+        }, []
     ) 
 
     useEffect(
@@ -28,7 +27,7 @@ export default function CartContextProvider(props){
             //save new value to localStorage
             localStorage.setItem('shoppingList', JSON.stringify(cart))
 
-        }, [cart] //runs anytime cart changes
+        }, [cart]
     ) 
 
 
@@ -54,9 +53,9 @@ export default function CartContextProvider(props){
         setCart([]);
     }
 
-    return(
-        <CartContext.Provider value={{cart, addProduct, removeProduct, clearCart}}>
-            {props.children}
-        </CartContext.Provider>
+return(
+    <CartContext.Provider value={{cart, addProduct, removeProduct, clearCart}}>
+        {props.children}
+    </CartContext.Provider>
     )
 }

@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
 import './Contact.css';
 
-function Contact() {
+export default function Contact() {
   
   //Setting state for the form 
   const [firstName, setFirstName] = useState('');
@@ -65,12 +65,14 @@ return (
           value={firstName}
           placeholder="First Name"
           onChange={(e) => setFirstName(e.target.value)}
+          required
         />
         <input
           type="text"
           value={lastName}
           placeholder="Last Name"
           onChange={(e) => setLastName(e.target.value)}
+          required
         />
         <textarea
           type="text"
@@ -78,15 +80,13 @@ return (
           value={message}
           placeholder="Write Your Message Here"
           onChange={(e) => setMessage(e.target.value)}
+          required
         />
-        <button id="submit-form-btn" type="submit">
-          Submit
-        </button>
+        <button id="submit-form-btn">Submit</button>
         <Modal
           isOpen={isOpen}
           onRequestClose={() => setIsOpen(false)}
           style={customStyles}
-          contentLabel="Form Confirmation"
         >
           <div className="modal-container2">
             <i id='modal-check-icon2'>
@@ -99,5 +99,3 @@ return (
     </div>
   );
 }
-
-export default Contact;

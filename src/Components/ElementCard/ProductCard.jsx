@@ -4,7 +4,7 @@ import { FaHeart, FaRegHeart } from "react-icons/fa"
 import { Link } from 'react-router-dom'
 import { CartContext } from '../Contexts/CartContext'
 
-function ProductCard({product}) {
+export default function ProductCard({product}) {
 
   const {cart, addProduct, removeProduct} = useContext(CartContext)
 
@@ -17,8 +17,6 @@ function ProductCard({product}) {
 
   }, [cart]);
 
-  //Rendering the products from the API on the page
-
 return (
     <div className='product-card'>
         <img src={product?.image} alt={product?.title}/>
@@ -26,7 +24,7 @@ return (
           <p className='item-category'>{product?.category.charAt(0).toUpperCase() + product?.category.slice(1)}</p>
         <section className='bottom-card-section'>
           <h4>{"£" + product?.price}</h4>
-          <Link to={`/Product/${product?.id}`} id='discover-more-btn' type='button'>Discover more</Link>
+          <Link to={`/Product/${product?.id}`} id='discover-more-btn' type='button'>View</Link>
         </section>
         {
             shoppingCartItem?
@@ -37,5 +35,3 @@ return (
     </div>
   )
 }
-
-export default ProductCard;

@@ -1,14 +1,14 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import './Checkout.css'
 import { CartContext } from '../../Contexts/CartContext'
 import {BsTrash3, BsCheck2Circle} from 'react-icons/bs'
 import Modal from 'react-modal';
 import { useNavigate } from 'react-router-dom';
 
-function Checkout() {
+export default function Checkout() {
   
   const {cart, removeProduct, clearCart} = useContext(CartContext)
-  
+
   //activate useNavigate
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ function Checkout() {
 
   Modal.setAppElement(document.getElementById('root'));
   
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   //Styling for modal
   const customStyles = {
@@ -65,7 +65,7 @@ function Checkout() {
                     </section>
                   <section className='checkout-right-side'>
                     <h2>{"£" + item.price}</h2>
-                    <strong id='quantity'>1</strong>
+                      <strong id='quantity'>1</strong>                    
                     <i id='remove-icon' onClick={() => removeProduct(item?.id)}> <BsTrash3 /></i>
                   </section>
                 </div>
@@ -98,5 +98,3 @@ function Checkout() {
         </div>
   )
 }
-
-export default Checkout

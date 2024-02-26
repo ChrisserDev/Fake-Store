@@ -6,7 +6,7 @@ import { CartContext } from '../../Contexts/CartContext'
 
 //This page shows the details of a specific product.
 
-function Product() {
+export default function Product() {
 
   const {cart, addProduct, removeProduct} = useContext(CartContext)
 
@@ -58,5 +58,3 @@ function Product() {
     </div>
   )
 }
-
-export default Product

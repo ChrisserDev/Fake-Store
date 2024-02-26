@@ -7,9 +7,10 @@ import Homepage from './Components/Pages/Homepage/Homepage'
 import Contact from './Components/Pages/ContactPage/Contact'
 import Checkout from './Components/Pages/CheckoutPage/Checkout'
 import Product from './Components/Pages/ProductDetailsPage/Product'
+import ReactDOM from 'react-dom/client'
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
     <CartContextProvider >
@@ -26,4 +27,8 @@ function App() {
   );
 }
 
-export default App;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <>
+    <App />
+  </>
+)

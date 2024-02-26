@@ -3,7 +3,7 @@ import axios from 'axios'
 import './Homepage.css'
 import ProductCard from '../../ElementCard/ProductCard'
 
-function Homepage() {
+export default function Homepage() {
 
   //Using state to store the products, categories and the loading message that is being displayed whilst the data is fetched from the API.
   const [products, setProducts] = useState([]);
@@ -15,8 +15,7 @@ function Homepage() {
     //Call the API to get the items data
    axios.get(`https://fakestoreapi.com/products`)
     .then(res => {
-      console.log(res.data)
-      //Store the data from the API in state
+          //Store the data from the API in state
       setProducts(res.data)
     })
     .catch(err => console.log(err))
@@ -87,5 +86,3 @@ function Homepage() {
     </div>
   );
 }
-
-export default Homepage

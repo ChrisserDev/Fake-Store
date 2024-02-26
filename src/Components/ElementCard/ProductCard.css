@@ -24,22 +24,23 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
-    gap: 75px;
+    justify-content: space-between;
 }
 
-.product-card h4{
+.product-card > h4{
     font-size: 16px;
     padding: 10px 0 5px 0;
 }
 
 #discover-more-btn{
     background: #FFD814;
-    font-size: 16px;
-    padding: 10px 5px; 
+    font-size: 1.2rem;
+    padding: 5px 10px; 
     cursor: pointer;
     text-decoration: none;
     color: black;
     height: fit-content;
+    border-radius: 5px;
 }
 
 #discover-more-btn:hover{
@@ -47,7 +48,7 @@
     color: white;
 }
 
-.bottom-card-section h4{
+.bottom-card-section > h4{
     font-size: 20px;
 }
 
@@ -71,7 +72,7 @@
     color: #3A4895;
 }
 
-.product-card p{
+.product-card > p{
     font-size: 16px;
     color: gray;
 }

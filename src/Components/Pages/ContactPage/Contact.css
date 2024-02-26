@@ -1,4 +1,4 @@
-.contact-container{
+.contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,13 +6,13 @@
     min-height: 100vh;
 }
 
-.contact-container h1{
+.contact-container > h1{
     margin-bottom: 20px;
     color: #3A4895;
     font-size: 40px;
 }
 
-.form-container{
+.form-container {
     display: flex;
     flex-direction: column;
     position: relative;

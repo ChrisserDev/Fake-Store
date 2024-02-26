@@ -4,8 +4,9 @@ import { BsFillBasket2Fill } from "react-icons/bs"
 import { Link } from 'react-router-dom'
 import { CartContext } from '../Contexts/CartContext'
 
-function Header() {
+export default function Header() {
 
+  // Accessing cart data from the CartContext
   const {cart} = useContext(CartContext)
 
 return (
@@ -16,5 +17,3 @@ return (
     </div>
   )
 }
-
-export default Header 
