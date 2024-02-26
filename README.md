@@ -6,14 +6,6 @@ This project is a React-based e-commerce website called "Fake Store." It include
 
 ## Key Features:
 
-### Global State Management: 
-
-Utilizes React context (CartContext) to manage the global state of the shopping cart. This allows components across the application to access and update the cart state.
-
-### Local Storage Integration: 
-
-Uses localStorage to persist the shopping cart data. The cart state is loaded from local storage on page load and updated in local storage whenever the cart changes.
-
 ### Product Display: 
 
 The homepage displays products fetched from the "Fake Store" API. Users can filter products by category or view all products.
